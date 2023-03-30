@@ -1,0 +1,339 @@
+/**
+ * @name Laz
+ * @author Alicia#8080
+ * @version 1.0.0
+ * @description New and improved theme
+ */
+
+ :root {
+    --primary: #16171a;
+    --secondary: #1c1e22;
+    --third: #17191d;
+    --accent: #00aeff;
+    --accentLess: #419aff;
+    --accentOther: #0099ff;
+
+    --profiles: #1c1d22;
+    --profiles-second: #1f222b;
+}
+
+.theme-dark {
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #72767d;
+    --text-link: #00b0f4;
+    --channels-default: #8e9297;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: var(--primary);
+    --background-secondary: var(--primary);;
+    --background-secondary-alt: var(--secondary);
+    --background-tertiary: var(--third);
+    --background-floating: #18191c;
+    --background-mobile-primary: #36393f;
+    --background-mobile-secondary: #2f3136;
+    --background-modifier-hover: rgba(79,84,92,0.16);
+    --background-modifier-active: rgba(79,84,92,0.24);
+    --background-modifier-selected: rgba(79,84,92,0.32);
+    --background-modifier-accent: hsla(0,0%,100%,0.06);
+    --background-mentioned: rgba(250,166,26,0.05);
+    --background-mentioned-hover: rgba(250,166,26,0.08);
+    --background-message-hover: rgba(4,4,5,0.07);
+    --background-help-warning: rgba(250,166,26,0.1);
+    --background-help-info: rgba(0,176,244,0.1);
+    --scrollbar-thin-thumb: #202225;
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: var(--accent);
+    --scrollbar-auto-track: rgba(192, 192, 209, 0.021);
+    --scrollbar-auto-scrollbar-color-thumb: #202225;
+    --scrollbar-auto-scrollbar-color-track: #2f3136;
+    --elevation-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+    --elevation-low: 0 1px 0 rgba(4,4,5,0.2),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --elevation-medium: 0 4px 4px rgba(0,0,0,0.16);
+    --elevation-high: 0 8px 16px rgba(0,0,0,0.24);
+    --logo-primary: #fff;
+    --focus-primary: #00b0f4;
+    --radio-group-dot-foreground: #8ea1e1;
+    --guild-header-text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    --channeltextarea-background: #40444b;
+    --activity-card-background: #202225;
+    --textbox-markdown-syntax: #8e9297;
+    --deprecated-card-bg: rgba(32,34,37,0.6);
+    --deprecated-card-editable-bg: rgba(32,34,37,0.3);
+    --deprecated-store-bg: #36393f;
+    --deprecated-quickswitcher-input-background: #72767d;
+    --deprecated-quickswitcher-input-placeholder: hsla(0,0%,100%,0.3);
+    --deprecated-text-input-bg: rgba(0,0,0,0.1);
+    --deprecated-text-input-border: rgba(0,0,0,0.3);
+    --deprecated-text-input-border-hover: #040405;
+    --deprecated-text-input-border-disabled: #202225;
+    --deprecated-text-input-prefix: #dcddde;
+}
+
+/*Channel Interactions*/
+
+/*Unread Channel*/
+
+.unread-2lAfLh {
+    background: transparent;
+}
+
+/*Unread Channel*/
+
+/*Channel Effects*/
+
+.wrapper-2jXpOf:hover .content-1x5b-n, .modeSelected-346R90 .content-1x5b-n, .modeSelected-346R90:hover .content-1x5b-n {
+    background-color: transparent;
+}
+
+.content-1x5b-n::before {
+    content: '';
+    background: rgb(92, 92, 92);
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    transform: translate(-6px,0);
+    transition: background .15s ease;
+}
+
+.unread-2lAfLh+.content-1x5b-n::before {
+    background: rgb(150, 150, 150);
+}
+
+.wrapper-2jXpOf.modeSelected-346R90 .content-1x5b-n::before, .modeConnected-3IsKId .content-1x5b-n::before {
+    background: var(--accent);
+}
+
+.content-1x5b-n::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    position: absolute;
+    left: 3px;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    transition: background .1s ease;
+}
+
+.wrapper-2jXpOf:hover .content-1x5b-n::after {
+    background: #b8b8b80e;
+}
+
+.wrapper-2jXpOf.modeSelected-346R90 .content-1x5b-n::after, .modeConnected-3IsKId .content-1x5b-n::after, .modeConnected-3IsKId:hover .content-1x5b-n::after {
+    background: rgba(201, 201, 201, 0.144);
+}
+
+.wrapper-2jXpOf:hover .content-1x5b-n {
+    transform: translateX(-2px);
+}
+.wrapper-2jXpOf .content-1x5b-n {
+    border-radius: 0px 0px 0px 0px!important;
+    transition: transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.wrapper-2jXpOf.modeSelected-346R90 .content-1x5b-n, .modeConnected-3IsKId .content-1x5b-n, .modeConnected-3IsKId:hover .content-1x5b-n {
+    transform: translateX(-5px);
+}
+
+.modeSelected-346R90 .icon-1DeIlz, .modeSelected-346R90:hover .icon-1DeIlz, .modeConnected-3IsKId .icon-1DeIlz {
+    color: var(--accentLess);
+}
+
+
+/*Channel Effects*/
+
+/*Server Effects*/
+
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9, .wrapper-1BJsBx:hover .childWrapper-anI2G9 {
+    background-color: var(--accentLess);
+}
+
+.childWrapper-anI2G9 svg {
+    display: none;
+}
+
+[role="listitem"] .childWrapper-anI2G9::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ei-heart.svg/512px-Ei-heart.svg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+}
+
+
+/*Server Effects*/
+
+/*Chat Effects*/
+
+.scrollableContainer-2NUZem {
+    background: var(--third);
+}
+
+/*Chat Effects*/
+
+/*top effects*/
+
+.wordmark-2iDDfm path {
+    fill: none;
+}
+
+.wordmark-2iDDfm::before {
+    content: '';
+    width: 50px;
+    height: 15px;
+    background-image: url("https://imgur.com/AO1txup.png");
+    background-size: cover;
+    position: absolute;
+    filter: invert(100%) brightness(80%);
+}
+
+/*top effects*/
+
+/*profile view effects*/
+
+.headerNormal-T_seeN .headerTop-3C2Zn0{
+    background-color: var(--profiles);
+}
+
+.body-3iLsc4 {
+    overflow: visible!important;
+}
+
+.body-3iLsc4::before{
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    background: linear-gradient(24deg, var(--accent), var(--accentLess));
+    z-index: 10;
+    left: 0;
+    top: 0;
+}
+
+.theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
+    background-color: var(--profiles-second);
+}
+
+.inputDefault-_djjkz {
+    background: var(--third);
+}
+
+.layer-v9HyYc {
+    animation: aaa .2s ease;
+}
+
+@keyframes aaa {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+.headerPlaying-j0WQBV, .headerSpotify-zpWxgT, .header-QKLPzZ  {
+    background: var(--profiles)
+}
+
+.activity-11LB_k, .activity-1ythUs, .tabBarContainer-1s1u-z {
+    background: var(--third);
+    border: none;
+}
+
+.layout-2DM8Md::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    background: transparent;
+    bottom: 0;
+    left: 0;
+    transition: background .2s ease, width .2s ease;
+}
+
+.selected-aXhQR6 .layout-2DM8Md::after {
+    background: linear-gradient(24deg, var(--accent), var(--accentLess));
+    width: 100%;
+}
+
+.header-QKLPzZ {
+    border-bottom: 5px solid var(--accentOther);
+}
+
+/*profile view effects*/
+
+/*buttons*/
+.lookFilled-1Gx00P.colorBrand-3pXr91, .lookFilled-1Gx00P.colorGreen-29iAKY, .lookInverted-2D7oAl.colorGreen-29iAKY, .lookFilled-1Gx00P.colorGrey-2DXtkV {
+    background: var(--accent);
+    color: white;
+}
+.lookFilled-1Gx00P:hover.colorBrand-3pXr91, .lookFilled-1Gx00P:hover.colorGreen-29iAKY, .lookInverted-2D7oAl:hover.colorGreen-29iAKY, .lookFilled-1Gx00P:hover.colorGrey-2DXtkV {
+    background: var(--accentOther);
+}
+
+.lookOutlined-3sRXeN.colorWhite-rEQuAQ {
+    transition: background .1s ease, color .1s ease;
+}
+
+.lookOutlined-3sRXeN.colorWhite-rEQuAQ:hover {
+    color: var(--profiles);
+    background: white;
+}
+
+.side-8zPYf6 .item-PXvHYJ {
+    border-radius: 0;
+}
+
+.side-8zPYf6 .item-PXvHYJ::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: var(--accentLess);
+    left: 0;
+    bottom: 0;
+    transition: width .2s ease;
+}
+
+.side-8zPYf6 .da-selected.item-PXvHYJ::after {
+    width: 100%;
+}
+
+.navButtonActive-1MkytQ {
+    background-color: var(--accent);
+}
+
+/*buttons*/
+
+/*misc*/
+
+.peopleList-3c4jOR,.friendsEmpty-1K9B4k {
+    background: var(--third);
+}
+
+.colorDefault-2K3EoJ.focused-3afm-j {
+    background-color: var(--accentOther);
+}
+
+.colorDanger-2qLCe1.focused-3afm-j {
+    background-color: #f04747;
+}
+
+.autocomplete-1vrmpx {
+    background-color: var(--primary)!important;
+}
+
+.scrollableContainer-15eg7h{
+    background-color:var(rgba(0, 0, 0, 0.6))}
+
+/*misc*/
